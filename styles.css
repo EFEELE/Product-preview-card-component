@@ -1,0 +1,177 @@
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    color: var(--Dark-cyan);
+    font-weight: 600;
+}
+
+.attribution a {
+    color: var(--Dark-cyan);
+    font-weight: 800;
+}
+
+:root {
+    --Dark-cyan: hsl(158, 36%, 37%);
+    --Cream: hsl(30, 38%, 92%);
+    --Very-dark-blue: hsl(212, 21%, 14%);
+    --Dark-grayish-blue: hsl(228, 12%, 48%);
+
+    --hover: hsl(156, 47%, 15%);
+
+}
+
+footer{
+    position: absolute;
+    bottom: 2rem;
+}
+
+/* MONTSERRAT : Weights: 500, 700 */
+
+
+/* FRAUNCES :  Weights: 700 */
+
+body {
+    font-size: 14px;
+    font-family: "Montserrat", sans-serif;
+    background: var(--Cream);
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+
+main {
+    border-radius: 1rem;
+    width: 610px;
+    height: 470px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 0px 20px #00000005;
+}
+
+.picture {
+    background-image: url(./images/image-product-desktop.jpg);
+    width: 50%;
+    height: 100%;
+    border-top-left-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+    background-size: cover ;
+}
+
+.content {
+    padding: 2.4rem;
+    width: 50%;
+    height: 100%;
+    background-color: white;
+    border-top-right-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    box-sizing: border-box;
+    
+}
+h2{
+    margin: 0;
+    font-size: .8rem;
+    text-transform: uppercase;
+    font-weight: 500;
+    color: var(--Dark-grayish-blue);
+    letter-spacing: .3rem;
+}
+h1{
+    font-family: "Fraunces", serif;
+    font-size: 2.2rem;
+    line-height: 1;
+    margin: 1rem 0rem;
+    color: var(--Very-dark-blue);
+}
+p{
+    margin: 0;
+    color: var(--Dark-grayish-blue);
+    font-weight: 500;
+    line-height: 1.5;
+}
+
+.price{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.price-actual{
+    color: var(--Dark-cyan);
+    font-family: "Fraunces", serif;
+    font-weight: 700;
+    font-size: 2rem;
+}
+
+.price-old{
+    text-decoration: line-through;
+    margin-left: 1rem;
+}
+
+a.button{
+    background-color: var( --Dark-cyan);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+    text-decoration: none;
+    padding: .7rem 0rem;
+    border-radius: .5rem;
+}
+
+.button ion-icon{
+    font-size: 1.4rem;
+    margin-right: 1rem;
+}
+
+a.button:hover{
+    background-color: var(--hover);
+    transition: .3s ease;
+}
+
+@media screen and (max-width: 580px){
+    body{
+        flex-direction: column;
+        min-height: auto;
+    }
+    main{
+        flex-direction: column;
+        height: auto;
+        margin: 2rem 1rem;
+        width: auto;
+    }
+
+    .picture{
+        height: 250px;
+        border-bottom-left-radius: 0rem;
+        border-top-right-radius: 1rem;
+        width: 100%;
+        background-position: center;
+    }
+    .content{
+        border-top-right-radius: 0rem;
+        border-bottom-left-radius: 1rem;
+        width: 100%;
+        padding: 1.8rem;
+    }
+    h1{
+        font-size: 2rem;
+    }
+    .price {
+        margin: 1.2rem;
+    }
+
+    footer{
+        position: relative;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        bottom: 0rem;
+    }
+}
